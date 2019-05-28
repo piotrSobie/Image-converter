@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.text.Font?>
+
+<StackPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="445.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="pt3image.PT3Controller">
+   <children>
+      <TableView fx:id="imageTable" maxHeight="-Infinity" minHeight="-Infinity" prefHeight="324.0" prefWidth="600.0" StackPane.alignment="TOP_CENTER">
+        <columns>
+          <TableColumn fx:id="imageNameColumn" prefWidth="334.0" text="Nazwa pliku" />
+          <TableColumn fx:id="progressColumn" prefWidth="118.0" text="Postęp" />
+            <TableColumn fx:id="statusColumn" prefWidth="147.0" text="Status" />
+        </columns>
+      </TableView>
+      <Button fx:id="chooseFile" mnemonicParsing="false" onAction="#selectFiles" text="Wybierz pliki" StackPane.alignment="BOTTOM_LEFT">
+         <StackPane.margin>
+            <Insets bottom="20.0" left="15.0" />
+         </StackPane.margin>
+      </Button>
+      <TextArea fx:id="textField" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="32.0" prefWidth="79.0" StackPane.alignment="BOTTOM_RIGHT">
+         <StackPane.margin>
+            <Insets bottom="60.0" right="20.0" />
+         </StackPane.margin>
+      </TextArea>
+      <Button fx:id="threadButton" mnemonicParsing="false" onAction="#setThreadNumber" text="Wybierz ilosc watkow, 0 - commonPool" StackPane.alignment="BOTTOM_RIGHT">
+         <StackPane.margin>
+            <Insets bottom="20.0" right="30.0" />
+         </StackPane.margin>
+         <font>
+            <Font size="10.0" />
+         </font>
+      </Button>
+      <Button fx:id="saveFile" alignment="BOTTOM_CENTER" mnemonicParsing="false" onAction="#saveFiles" text="Zapisz" translateX="-100.0" StackPane.alignment="BOTTOM_CENTER">
+         <StackPane.margin>
+            <Insets bottom="20.0" />
+         </StackPane.margin>
+      </Button>
+      <Label fx:id="timeLabel" prefHeight="24.0" prefWidth="165.0" textAlignment="CENTER" StackPane.alignment="BOTTOM_LEFT">
+         <StackPane.margin>
+            <Insets bottom="60.0" left="20.0" />
+         </StackPane.margin>
+      </Label>
+      <Label fx:id="threadNumberLabel" prefHeight="26.0" prefWidth="168.0" text="Przetwarzanie sekwencyjne" textAlignment="CENTER" StackPane.alignment="BOTTOM_CENTER">
+         <StackPane.margin>
+            <Insets bottom="60.0" />
+         </StackPane.margin>
+      </Label>
+   </children>
+</StackPane>
